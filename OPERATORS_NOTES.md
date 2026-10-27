@@ -29,9 +29,9 @@ For each relationship, write **composition**, **aggregation**, or **association*
 
 | Relationship | Composition, aggregation, or association | One-sentence justification |
 | --- | --- | --- |
-| `Hand` and its `Card`s | | |
-| The Blackjack game and its `Deck` and `Hand`s | | |
-| `Player` and the current `Room*` in the Dungeon | | |
+| `Hand` and its `Card`s | Composition | When a Hand object is destroyed, its array of cards is destroyed with it, and each card belongs only that hand instance. |
+| The Blackjack game and its `Deck` and `Hand`s | Composition | The game session manages and owns the Deck and the player/dealer Hand objects, when the game is destroyed or end, the deck and hands are destroyed too |
+| `Player` and the current `Room*` in the Dungeon | Association | Player class only stores a pointer reference (Room*) to a room that exists independently in the dungeon map is not owned or destroyed by the player. |
 
 ## 4. Checklist before you push
 
