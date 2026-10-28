@@ -51,6 +51,8 @@ public:
   /// Remove every card.
   void clear();
 
+friend std::ostream& operator<<(std::ostream& os, const Hand& hand);
+
 private:
   Card m_cards[max_hand];
   int m_count;
